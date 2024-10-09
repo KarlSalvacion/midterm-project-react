@@ -17,7 +17,7 @@ function AddItem() {
       setError('ID already exists. Please enter a unique ID.');
     } else {
       const newItem = { id, name, quantity, price, category };
-      setItems([...items, newItem]); // add new item to the state
+      setItems([...items, newItem]); 
       localStorage.setItem('items', JSON.stringify([...items, newItem])); // save to local storage
       alert('Item added successfully!');
       setId(''); setName(''); setQuantity(0); setPrice(0); setCategory('');
@@ -52,7 +52,7 @@ function AddItem() {
       <div className="recently-added">
         <h2>Recently Added Items:</h2>
         <ul>
-          {items.slice(-3).map((item, index) => (
+          {items.slice(-10).map((item, index) => (
             <li key={index}>
               ID: {item.id}, Name: {item.name}, Quantity: {item.quantity}, Price: {item.price}, Category: {item.category}
             </li>
