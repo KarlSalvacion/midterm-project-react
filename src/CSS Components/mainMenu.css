@@ -8,10 +8,9 @@
     z-index: 1000; 
     flex-direction: column;
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
-  }
+}
   
-   .navbar-brand{
-  
+.navbar-brand{
     color: #d6d2d2; 
     position: relative;
     top: 30px; 
@@ -22,15 +21,15 @@
     font-family: "Outfit";
     text-align: center;
     cursor: default;
-    transition: opacity 0.3s ease-in-out;
-  }
+    transition: all 0.3s ease-in-out;
+}
   
-  .navbar-brand:hover {
+.navbar-brand:hover {
     color: #d6d2d2; 
     text-decoration: none; 
-  }
+}
   
-  .custom-navbar {
+.custom-navbar {
     position: fixed;
     top: 0;
     left: 0;
@@ -42,9 +41,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
   
-  .dashboard-text {
+.dashboard-text {
     position: fixed;
     top: 120px;
     left: 15px;
@@ -54,18 +53,31 @@
     transition: all 0.3s ease-in-out;
     box-sizing: border-box;
     cursor: pointer;
-  }
+    text-decoration: none;
+}
   
-  .dashboard-text:hover {
+.dashboard-text:hover {
     background-color: rgb(233, 190, 37); 
     transform: translateX(-10px);
     padding-left: 10px;
     padding-right: 105px;
     font-weight: 700;
     color: #232324;
-  }
+
+}
   
-  .navbar-nav {
+.dashboard-text.active {
+
+    background-color: rgb(233, 190, 37); 
+    transform: translateX(-10px);
+    padding-left: 10px;
+    padding-right: 105px;
+    font-weight: 700;
+    color: #232324;
+    border-radius: 3px;
+}
+
+.navbar-nav {
     position: fixed;
     top: 180px;
     left: 15px;
@@ -74,90 +86,73 @@
     margin-bottom: 100px;
     margin-left: -5px;
     transition: all 0.3s ease-in-out;
-  }
+}
   
-  .navbar-nav p {
+.navbar-nav p {
     margin-bottom: 0px;
-  }
+}
   
-  .navbar-nav div {
+.navbar-nav div {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(143, 143, 143, 0.459);
     padding: 5px;
     transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar-nav div:hover {
+    border-radius: 3px;
+}
+
+.navbar-nav div:hover {
     background-color: rgb(23, 21, 21);
     color: rgb(233, 190, 37) ;
     margin-left: -5px;
     margin-right: -10px;
     padding-bottom: -10px;
     cursor: pointer;
-  }
+}
   
-  .search-section {
+.search-section {
+    color: #f2f2f2; /* change the color of the links */
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    border-radius: 3px;
     margin-top: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
-    transition: 0.3s;
     box-sizing: border-box;
-    margin-bottom: 10px;
-  }
+    text-decoration: none;
+}
   
-  .add-section {
+.add-section, .update-section, .display-all-section, .display-category-section, .display-lowstock-section, .sort-section, .remove-section {
+    color: #f2f2f2;
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    border-radius: 3px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
-  }
+    text-decoration: none;
+}
+
+.search-section:hover, .add-section:hover, .update-section:hover, .display-all-section:hover, .display-category-section:hover, .display-lowstock-section:hover, .sort-section:hover, .remove-section:hover {
+    background-color: rgb(23, 21, 21); 
+    color: rgb(233, 190, 37); 
+    margin-left: -5px;
+    margin-right: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+}
   
-  .update-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .display-all-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .display-category-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .display-lowstock-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .sort-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .remove-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .remove-section:hover {
-    background-color: rgb(168, 12, 12) !important;
-    color: #d6d2d2 !important;
-  }
-  
-  .fa-icon {
+.search-section.active, .add-section.active, .update-section.active, .display-all-section.active, .display-category-section.active, .display-lowstock-section.active, .sort-section.active, .remove-section.active {
+    background-color: rgb(233, 190, 37); 
+    color: rgb(23, 21, 21); 
+    font-weight: 700;
+}
+
+.fa-icon {
     font-size: 15px;
-  }
+}
   
-  .navbar-toggler {
+.navbar-toggler {
     position: absolute;
     top: 30px;
     left: 220px;
@@ -170,32 +165,32 @@
     color: #232323; 
     background-color: rgb(233, 190, 37); 
     padding: 5px;
-  }
+}
   
-  .navbar-toggler:hover {
+.navbar-toggler:hover {
     background-color: rgb(233, 190, 37); 
     padding: 6px;
-  }
+}
   
-  .navbar-toggler:focus {
+.navbar-toggler:focus {
     outline: none;
     box-shadow: none;
-  }
+}
   
-  .navbar.collapsed {
+.navbar.collapsed {
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out;
     width: 65px; 
-  }
+}
   
-  .navbar.collapsed .navbar-toggler {
+.navbar.collapsed .navbar-toggler {
     left: 0px;
     transition: left 0.3s ease-in-out;
     background-color: transparent;
     border: 2px solid #f2f2f2;
     color: #d6d2d2;
-  }
+}
   
-  .navbar.collapsed .navbar-toggler:hover {
+.navbar.collapsed .navbar-toggler:hover {
   
     left: 0px;
     transition: left 0.3s ease-in-out;
@@ -203,36 +198,44 @@
     border: 2px solid rgb(233, 190, 37); 
     color: rgb(233, 190, 37); 
     transition: 0.3s;
-  }
+}
   
-  .navbar.collapsed .navbar-brand {
+.navbar.collapsed .navbar-brand {
+    left: -170px;
     opacity: 0;
-  }
+}
     
-  .navbar.collapsed .navbar-nav {
+.navbar.collapsed .navbar-nav {
+    left: -200px;
     opacity: 0;
     pointer-events: none;
     cursor: default;
-  }
-  
-  .navbar.collapsed .dashboard-text {
+}
+
+.navbar.collapsed .navbar-nav div .fa-icon {
+    margin-right: 10px;
+}
+
+.navbar.collapsed .dashboard-text {
+    left: -200px;
     opacity: 0;
     cursor: default;
-  }
+}
   
-  .container-fluid {
+.container-fluid {
     position: relative;
-  }
+}
   
-  .dashboard {
+.dashboard {
     margin-left: 250px;
     transition: margin 0.3s ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-  }
+}
+
+.navbar.collapsed + .dashboard {
+   margin-left: 0px;
+} 
+
   
-  .navbar.collapsed + .dashboard {
-    margin-left: 0px;
-  } 
