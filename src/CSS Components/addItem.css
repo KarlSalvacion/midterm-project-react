@@ -1,0 +1,36 @@
+body {
+    margin-top: 100px;
+}
+
+.addItem-container {
+
+    font-family: "Poppins";
+
+}
+
+.addItem-text {
+    font-weight: 600;
+    font-size: 40px;
+}
+
+
+.addItem-form {
+
+
+}
+
+.addItem-btn {
+
+
+}
+
+.error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+.recently-added {
+
+    position: fixed;
+    top: 250px
+}
