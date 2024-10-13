@@ -1,7 +1,6 @@
 .dashboard-section {
     margin-top: 50px;
     padding: 20px;
-    background-color: #f9f9f9;
     height: 600px;
     border-radius: 10px;
   }
@@ -14,6 +13,7 @@
     height: 140px;
     border-radius: 10px;
     box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .dashboard-title {
@@ -56,18 +56,11 @@
     transform: translateY(-5px);
   }
   
-  .middle-section {
-    height: 200px;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    margin: 20px;
-  }
-  
   .bottom-section {
     display: flex;
     flex-direction: row;
     width: 100%;
+    
   }
   
   .summary-section {
@@ -80,6 +73,7 @@
     color: #fff;
     text-align: left;
     flex: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .summary-item {
@@ -105,6 +99,7 @@
     padding: 20px;
     border-radius: 10px;
     margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
   .summary-title {
@@ -157,7 +152,8 @@
   }
   
   .recently-added-table th {
-    background-color: rgb(233, 190, 37);
+    background-color: rgb(233, 190, 37) !important;
+    color: #353535 !important;
   }
 
   .recently-added-table tbody {

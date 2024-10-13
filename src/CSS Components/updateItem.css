@@ -67,7 +67,7 @@
   background-color: rgb(233, 190, 37); 
   color: #353535;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -84,20 +84,22 @@
 .update-message {
   margin-top: 30px;
   font-size: 18px;
-  color: #cfcfcf;
+  font-weight: 700;
+  color: #353535;
 }
   
 .not-found-text {
   margin-top: 30px;
   font-size: 18px;
-  color: #cfcfcf;
+  color: #353535;
   text-align: center;
 }
   
 .update-prompt {
   margin-top: 30px;
   font-size: 18px;
-  color: #cfcfcf;
+  color: #13791d;
+  font-weight: 700;
   text-align: center;
 }
 

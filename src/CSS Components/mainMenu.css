@@ -353,7 +353,14 @@
 }
 
 .navbar.collapsed .collapsed-dashboard-text.active {
-    background-color: aqua;
+    padding-left: 17px;
+    padding-right: 23px;
+    color: #353535;
+    left: 5px;
+    background-color: rgb(233, 190, 37);
+    font-weight: 700;
+    border-radius: 3px;
+    transform: translateX(0px);
 }
 
 .navbar.collapsed .collapsed-dashboard-text:hover {
@@ -408,4 +415,10 @@
     color: #d6d2d2;
     border: 2px solid #d6d2d2;
     border-radius: 5px;
+}
+
+.navbar.collapsed .collapsed-icons a.active {
+
+    background-color: rgb(233, 190, 37);
+    color: #353535;
 }

@@ -17,8 +17,7 @@ function RemoveItem() {
     if (id.trim() === '') {
     return;
   }
-
-
+  
     const foundItem = items.find((item) => item.id === id);
     if (foundItem) {
       const updatedItems = items.filter((item) => item.id !== id);
