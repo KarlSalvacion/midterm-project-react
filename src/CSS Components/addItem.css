@@ -65,7 +65,7 @@ select:focus {
 
 .modal-dialog {
   margin: 0 auto;
-  width: 400px; /* adjust the width to your liking */
+  width: 400px; 
 }
 
 .modal-content {
@@ -155,12 +155,12 @@ select:focus {
     background-color: #ffffff; 
     color: #000000;
     border-radius: 10px;
-  }
+}
   
-  .recently-added-data-table thead th {
+.recently-added-data-table thead th {
     border-bottom: 1px solid #fff;
     background-color: #444548;
     color: rgb(239, 239, 239);
     font-weight: 500;
-  }
+}
   

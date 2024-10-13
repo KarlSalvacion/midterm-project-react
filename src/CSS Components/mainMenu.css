@@ -133,7 +133,8 @@
     text-decoration: none;
 }
   
-.add-section, .update-section, .display-items-section, .sort-section, .remove-section {
+.add-section, .update-section, .display-items-section, 
+.sort-section, .remove-section {
     color: #f2f2f2;
     transition: all 0.3s ease-in-out;
     padding: 5px;
@@ -203,42 +204,42 @@
     color: rgb(23, 21, 21);
     font-weight: 700;
     padding-right: 95px;
-  }
+}
   
-  .add-section.active {
+.add-section.active {
     background-color: rgb(233, 190, 37);
     color: rgb(23, 21, 21);
     font-weight: 700;
     padding-right: 125px;
-  }
+}
   
-  .update-section.active {
+.update-section.active {
     background-color: rgb(233, 190, 37);
     color: rgb(23, 21, 21);
     font-weight: 700;
     padding-right: 95px;
-  }
+}
   
-  .display-items-section.active {
+.display-items-section.active {
     background-color: rgb(233, 190, 37);
     color: rgb(23, 21, 21);
     font-weight: 700;
     padding-right: 85px;
-  }
+}
   
-  .sort-section.active {
+.sort-section.active {
     background-color: rgb(233, 190, 37);
     color: rgb(23, 21, 21);
     font-weight: 700;
     padding-right: 122px;
-  }
+}
   
-  .remove-section.active {
+.remove-section.active {
     background-color: rgb(233, 190, 37);
     color: rgb(23, 21, 21);
     font-weight: 700;
     padding-right: 95px;
-  }
+}
 
 
 .fa-icon {
@@ -261,7 +262,9 @@
 }
   
 .navbar-toggler:hover {
-    background-color: rgb(233, 190, 37); 
+    background-color: #353535;
+    color: rgb(233, 190, 37);
+    border: 3px solid #e5e5e5;
     padding: 6px;
 }
   

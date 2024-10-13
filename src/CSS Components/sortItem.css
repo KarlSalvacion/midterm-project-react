@@ -1,5 +1,4 @@
 .sort-item-placeholder {
-    
     padding: 20px;
     margin-top: -10px;
     border-radius: 10px;
@@ -15,8 +14,7 @@
 
 .table-header {
     position: sticky;
-     top: 0;
-
+    top: 0;
 }
 
 .table th {
