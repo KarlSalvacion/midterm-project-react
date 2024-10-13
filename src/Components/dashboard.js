@@ -116,7 +116,7 @@ const RecentlyAddedSection = ({ items }) => {
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.category}</td>
-              <td style={{ color: item.quantity <= 5 ? '#ef4545' : 'inherit'}}>{item.quantity}</td>
+              <td style={{ color: item.quantity <= 5 ? '#ef4545' : 'inherit' }}>{item.quantity}</td>
               <td>{item.price}</td>
             </tr>
           ))}

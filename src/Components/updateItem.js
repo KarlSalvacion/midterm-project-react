@@ -9,6 +9,7 @@ function UpdateItem() {
   const [itemFound, setItemFound] = useState(null);
   const [updated, setUpdated] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const [updateMessage, setUpdateMessage] = useState('');
 
   const handleIdChange = (e) => {
     setId(e.target.value);
@@ -30,14 +31,26 @@ function UpdateItem() {
     const foundItem = items.find((item) => item.id === id);
     if (foundItem) {
       setItemFound(foundItem);
-      if (updateType === 'quantity') {
+      let previousValue;
+      if (updateType === 'Quantity') {
+        previousValue = foundItem.quantity !== undefined ? foundItem.quantity : 0;
         foundItem.quantity = parseInt(newValue);
-      } else if (updateType === 'price') {
+      } else if (updateType === 'Price') {
+        previousValue = foundItem.price !== undefined ? foundItem.price : 0;
         foundItem.price = parseFloat(newValue);
       }
       setItems([...items.filter((item) => item.id !== id), foundItem]);
       localStorage.setItem('items', JSON.stringify([...items.filter((item) => item.id !== id), foundItem]));
       setUpdated(true);
+      setUpdateMessage(`${updateType.charAt(0).toUpperCase() + updateType.slice(1).toLowerCase()} of item "${id}" is successfully updated from ${previousValue} to ${newValue}`);
+      setTimeout(() => {
+        setFormSubmitted(false);
+        setId('');
+        setUpdateType('');
+        setNewValue('');
+        setUpdated(false);
+        setUpdateMessage('');
+      }, 20000);
     } else {
       setUpdated(false);
     }
@@ -66,13 +79,13 @@ function UpdateItem() {
               className="input-field dropdown"
             >
               <option value="">Select field to update</option>
-              <option value="quantity">Quantity</option>
-              <option value="price">Price</option>
+              <option value="Quantity">Quantity</option>
+              <option value="Price">Price</option>
             </select>
           </div>
           <div className="inputUpdatedID">
             <input
-              type="text"
+              type="number"
               value={newValue}
               onChange={handleNewValueChange}
               placeholder="Enter new value"
@@ -84,7 +97,7 @@ function UpdateItem() {
         </form>
         {formSubmitted && (
           updated ? (
-            <p className="update-prompt">Item updated successfully</p>
+            <p className="update-prompt">{updateMessage}</p>
           ) : itemFound === null ? (
             <p className="not-found-text">Item not found</p>
           ) : (
