@@ -57,7 +57,7 @@ function DisplayItems() {
                 </tr>
               </thead>
               <tbody>
-                {filteredItems().map((item, index) => (
+                {filteredItems().reverse().map((item, index) => (
                   <tr key={index} className="rows">
                     <td>{item.id}</td>
                     <td>{item.name}</td>
