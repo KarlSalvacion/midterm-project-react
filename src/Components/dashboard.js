@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import '../CSS Components/dashboard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faPlus, faPencilAlt, faList, faSort, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { Link } from  'react-router-dom';
+
 
 const Dashboard = () => {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('items')) || []);
   const [electronics, setElectronics] = useState(0);
-  const [clothing, setClothing] = useState(0);
+  const [clothing, setClothing] = useState(0);  
   const [entertainment, setEntertainment] = useState(0);
+  const [lowStock, setLowStock] = useState(0);
 
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem('items')) || [];
@@ -16,46 +21,137 @@ const Dashboard = () => {
     setClothing(clothingCount);
     const entertainmentCount = items.filter(item => item.category === 'Entertainment').length;
     setEntertainment(entertainmentCount);
+    const lowStockCount = items.filter(item => item.quantity < 5).length;
+    setLowStock(lowStockCount);
   }, []);
 
   return (
     <div className="dashboard-section">
+      <TopSection />
+      <div className="bottom-section">
+        <RecentlyAddedSection items={items} />
+        <SummarySection
+          items={items}
+          electronics={electronics}
+          clothing={clothing}
+          entertainment={entertainment}
+          lowStock={lowStock}
+        />
+      </div>
+    </div>
+  );
+};
+
+const TopSection = () => {
+  return (
+    <div className="top-section">
       <h1 className="dashboard-title">Dashboard</h1>
-      <div className="summary-section">
-        <h2 className="summary-title">Summary</h2>
-        <div className="summary-container">
-          <div className="summary-item">
-            <p className="summary-label">Total Items:</p>
-            <p className="summary-value">{items.length}</p>
-          </div>
-          <div className="summary-item">
-            <p className="summary-label">Electronics:</p>
-            <p className="summary-value">{electronics}</p>
-          </div>
-          <div className="summary-item">
-            <p className="summary-label">Clothing:</p>
-            <p className="summary-value">{clothing}</p>
-          </div>
-          <div className="summary-item">
-            <p className="summary-label">Entertainment:</p>
-            <p className="summary-value">{entertainment}</p>
-          </div>
-        </div>
+      <div className="button-section">
+        
+        <Link to="/search-item">
+          <button className="button">
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="icons"/>
+            Search Item
+          </button>
+        </Link>
+
+        <Link to="/add-item">
+          <button className="button">
+            <FontAwesomeIcon icon={faPlus} className="icons" />
+            Add Item
+          </button>
+        </Link>
+        
+        <Link to="/update-item">
+          <button className="button">
+            <FontAwesomeIcon icon={faPencilAlt} className="icons"/>
+            Update Item
+          </button>
+        </Link>
+
+        <Link to="/display-item">
+          <button className="button">
+            <FontAwesomeIcon icon={faList} className="icons"/>
+            Display Item
+          </button>
+        </Link>
+
+        <Link to="/sort-item">
+          <button className="button">
+            <FontAwesomeIcon icon={faSort} className="icons"/>
+            Sort Item
+          </button>
+        </Link>
+
+        <Link to="/remove-item">
+          <button className="button">
+            <FontAwesomeIcon icon={faTrash} className="icons"/>
+            Remove Item
+          </button>
+        </Link>
       </div>
-      <div className="recently-added-section">
-        <h2 className="recently-added-title">Recently Added Items</h2>
-        <ul className="recently-added-list">
+    </div>
+  );
+};
+
+const RecentlyAddedSection = ({ items }) => {
+  return (
+    <div className="recently-added-section">
+      <h2 className="recently-added-title">
+        Recently Added Items
+      </h2>
+      <table className="recently-added-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Price </th>
+          </tr>
+        </thead>
+        <tbody>
           {items.slice(-5).map((item, index) => (
-            <li key={index} className="recently-added-item">
-              <p className="item-id">ID: {item.id}</p>
-              <p className="item-name">Name: {item.name}</p>
-              <p className="item-category">Category: {item.category}</p>
-              <p className="item-quantity">Quantity: {item.quantity}</p>
-              <p className="item-price">Price: {item.price}</p>
-            </li>
+            <tr key={index}>
+              <td>{item.id}</td>
+              <td>{item.name}</td>
+              <td>{item.category}</td>
+              <td>{item.quantity}</td>
+              <td>{item.price}</td>
+            </tr>
           ))}
-        </ul>
-      </div>
+        </tbody>
+      </table>
+    </div>
+  );
+};
+
+const SummarySection = ({ items, electronics, clothing, entertainment, lowStock }) => {
+  return (
+    <div className="summary-section">
+      <h2 className="summary-title">
+        Summary
+      </h2>
+        <div className="summary-item">
+          <p className="summary-label">Total Items:</p>
+          <p className="summary-value">{items.length}</p>
+        </div>
+        <div className="summary-item">
+          <p className="summary-label">Electronics Items:</p>
+          <p className="summary-value">{electronics}</p>
+        </div>
+        <div className="summary-item">
+          <p className="summary-label">Clothing  Items:</p>
+          <p className="summary-value">{clothing}</p>
+        </div>
+        <div className="summary-item">
+          <p className="summary-label">Entertainment Items:</p>
+          <p className="summary-value">{entertainment}</p>
+        </div>
+        <div className="summary-item">
+          <p className="summary-label">Low Stock Items:</p>
+          <p className="summary-value">{lowStock}</p>
+        </div>
     </div>
   );
 };

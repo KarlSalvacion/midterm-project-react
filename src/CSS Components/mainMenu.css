@@ -59,14 +59,25 @@
 .dashboard-text:hover {
     background-color: rgb(233, 190, 37); 
     transform: translateX(-10px);
-    padding-left: 10px;
-    padding-right: 105px;
+    padding-left: 15px;
+    padding-right: 100px;
     font-weight: 700;
     color: #232324;
-
+    border-radius: 3px;
 }
   
 .dashboard-text.active {
+
+    background-color: rgb(233, 190, 37); 
+    transform: translateX(-10px);
+    padding-left: 10px;
+    padding-right: 95px;
+    font-weight: 700;
+    color: #232324;
+    border-radius: 3px;
+}
+
+.dashboard-text.active:hover {
 
     background-color: rgb(233, 190, 37); 
     transform: translateX(-10px);
@@ -110,7 +121,7 @@
 }
   
 .search-section {
-    color: #f2f2f2; /* change the color of the links */
+    color: #f2f2f2; 
     transition: all 0.3s ease-in-out;
     padding: 5px;
     border-radius: 3px;
@@ -122,7 +133,7 @@
     text-decoration: none;
 }
   
-.add-section, .update-section, .display-all-section, .display-category-section, .display-lowstock-section, .sort-section, .remove-section {
+.add-section, .update-section, .display-items-section, .sort-section, .remove-section {
     color: #f2f2f2;
     transition: all 0.3s ease-in-out;
     padding: 5px;
@@ -133,7 +144,7 @@
     text-decoration: none;
 }
 
-.search-section:hover, .add-section:hover, .update-section:hover, .display-all-section:hover, .display-category-section:hover, .display-lowstock-section:hover, .sort-section:hover, .remove-section:hover {
+.search-section:hover {
     background-color: rgb(23, 21, 21); 
     color: rgb(233, 190, 37); 
     margin-left: -5px;
@@ -141,12 +152,94 @@
     padding-bottom: -10px;
     cursor: pointer;
 }
-  
-.search-section.active, .add-section.active, .update-section.active, .display-all-section.active, .display-category-section.active, .display-lowstock-section.active, .sort-section.active, .remove-section.active {
-    background-color: rgb(233, 190, 37); 
-    color: rgb(23, 21, 21); 
-    font-weight: 700;
+
+.add-section:hover {
+    background-color: rgb(23, 21, 21); 
+    color: rgb(233, 190, 37); 
+    margin-left: -5px;
+    margin-right: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
 }
+
+.update-section:hover {
+    background-color: rgb(23, 21, 21); 
+    color: rgb(233, 190, 37); 
+    margin-left: -5px;
+    margin-right: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+}
+
+.display-items-section:hover {
+    background-color: rgb(23, 21, 21); 
+    color: rgb(233, 190, 37); 
+    margin-left: -5px;
+    margin-right: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+}
+
+.sort-section:hover {
+    background-color: rgb(23, 21, 21); 
+    color: rgb(233, 190, 37); 
+    margin-left: -5px;
+    margin-right: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+}
+
+.remove-section:hover {
+    background-color: rgb(23, 21, 21); 
+    color: rgb(233, 190, 37); 
+    margin-left: -5px;
+    margin-right: -10px;
+    padding-bottom: -10px;
+    cursor: pointer;
+}
+
+.search-section.active {
+    background-color: rgb(233, 190, 37);
+    color: rgb(23, 21, 21);
+    font-weight: 700;
+    padding-right: 95px;
+  }
+  
+  .add-section.active {
+    background-color: rgb(233, 190, 37);
+    color: rgb(23, 21, 21);
+    font-weight: 700;
+    padding-right: 125px;
+  }
+  
+  .update-section.active {
+    background-color: rgb(233, 190, 37);
+    color: rgb(23, 21, 21);
+    font-weight: 700;
+    padding-right: 95px;
+  }
+  
+  .display-items-section.active {
+    background-color: rgb(233, 190, 37);
+    color: rgb(23, 21, 21);
+    font-weight: 700;
+    padding-right: 85px;
+  }
+  
+  .sort-section.active {
+    background-color: rgb(233, 190, 37);
+    color: rgb(23, 21, 21);
+    font-weight: 700;
+    padding-right: 122px;
+  }
+  
+  .remove-section.active {
+    background-color: rgb(233, 190, 37);
+    color: rgb(23, 21, 21);
+    font-weight: 700;
+    padding-right: 95px;
+  }
+
 
 .fa-icon {
     font-size: 15px;
@@ -186,8 +279,8 @@
     left: 0px;
     transition: left 0.3s ease-in-out;
     background-color: transparent;
-    border: 2px solid #f2f2f2;
-    color: #d6d2d2;
+    border: 2px solid rgb(233, 190, 37);
+    color: rgb(233, 190, 37);
 }
   
 .navbar.collapsed .navbar-toggler:hover {
@@ -195,8 +288,8 @@
     left: 0px;
     transition: left 0.3s ease-in-out;
     background-color: transparent;
-    border: 2px solid rgb(233, 190, 37); 
-    color: rgb(233, 190, 37); 
+    border: 2px solid #d6d2d2; 
+    color: #d6d2d2;
     transition: 0.3s;
 }
   
@@ -221,12 +314,12 @@
     opacity: 0;
     cursor: default;
 }
-  
+
 .container-fluid {
     position: relative;
 }
   
-.dashboard {
+.mainArea {
     margin-left: 250px;
     transition: margin 0.3s ease-in-out;
     display: flex;
@@ -234,8 +327,85 @@
     justify-content: center;
 }
 
-.navbar.collapsed + .dashboard {
+.navbar.collapsed + .mainArea {
    margin-left: 0px;
 } 
 
-  
+.collapsed-dashboard-text {
+    text-decoration: none;
+    display: flex;
+    position: fixed;
+    top: 120px;
+    left: 15px;
+    opacity: 0;
+    font-size: 20px;
+    font-weight: 600;
+    box-sizing: border-box;
+    cursor: pointer;
+    color: rgb(233, 190, 37);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar.collapsed .collapsed-dashboard-text {
+    top:  120px;
+    left: 22px;
+    opacity: 1;
+}
+
+.navbar.collapsed .collapsed-dashboard-text.active {
+    background-color: aqua;
+}
+
+.navbar.collapsed .collapsed-dashboard-text:hover {
+    padding-left: 10px;
+    padding-right: 30px;
+    color: #353535;
+    left: 5px;
+    background-color: rgb(233, 190, 37);
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.collapsed-icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 197px;
+    left: 3px;
+    gap: 4px;
+    color: rgb(233, 190, 37);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.collapsed-icons a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    transition: all 0.3s  ease-in-out;
+
+}
+
+.navbar.collapsed .collapsed-icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 197px;
+    left: 10px;
+    gap: 4px;
+    color: rgb(233, 190, 37);
+    opacity: 1;
+
+}
+
+.navbar.collapsed .collapsed-icons a:hover {
+    color: #d6d2d2;
+    border: 2px solid #d6d2d2;
+    border-radius: 5px;
+}
