@@ -70,9 +70,9 @@ function SortItems() {
         <div className="sort-container">
           <select value={sortBy} onChange={handleSortChange} className="dropdown-choice">
             <option value="none">Select a field to sort by</option>
+            <option value="name">Name</option>
             <option value="quantity">Quantity</option>
             <option value="price">Price</option>
-            <option value="name">Name</option>
             <option value="category">Category</option>
           </select>
           <select value={sortOrder} onChange={handleSortOrderChange} className="dropdown-choice">
@@ -96,7 +96,8 @@ function SortItems() {
                 <tr key={index}>
                   <td>{item.id}</td>
                   <td>{item.name}</td>
-                  <td style={{color: item.quantity <= 5 ? 'ef4545' : 'inherit'}}>{item.quantity}</td>
+                  <td style={{color: item.quantity <= 5 ? 'red' : 'inherit'}}>{item.quantity}</td>
+
                   <td>${item.price}</td>
                   <td>{item.category}</td>
                 </tr>
