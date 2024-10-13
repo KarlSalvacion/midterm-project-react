@@ -69,14 +69,14 @@ const TopSection = () => {
           </button>
         </Link>
 
-        <Link to="/display-item">
+        <Link to="/display-items">
           <button className="button">
             <FontAwesomeIcon icon={faList} className="icons"/>
             Display Item
           </button>
         </Link>
 
-        <Link to="/sort-item">
+        <Link to="/sort-items">
           <button className="button">
             <FontAwesomeIcon icon={faSort} className="icons"/>
             Sort Item
@@ -102,7 +102,7 @@ const RecentlyAddedSection = ({ items }) => {
       </h2>
       <table className="recently-added-table">
         <thead>
-          <tr>
+          <tr className="header">
             <th>ID</th>
             <th>Name</th>
             <th>Category</th>
@@ -116,7 +116,7 @@ const RecentlyAddedSection = ({ items }) => {
               <td>{item.id}</td>
               <td>{item.name}</td>
               <td>{item.category}</td>
-              <td>{item.quantity}</td>
+              <td style={{ color: item.quantity <= 5 ? '#ef4545' : 'inherit'}}>{item.quantity}</td>
               <td>{item.price}</td>
             </tr>
           ))}
