@@ -12,16 +12,6 @@ const handleToggle = () => {
     setIsCollapsed(!isCollapsed);
 };
  
-
-
-/*<div className="collapsed-icons">
-    <FontAwesomeIcon icon={faMagnifyingGlass} style={{ marginRight: '10px' }} className="fa-icon-collapsed"/>
-    <FontAwesomeIcon icon={faPlus} className="fa-icon" style={{ marginRight: '10px' }} />      
-</div>
-
-FOR COLLAPSED ICONS PAG MAY ROUTING NA LAHAT
-
-*/
 return (
     <div className="mainMenu-container">
         <nav className={`navbar custom-navbar ${isCollapsed ? 'collapsed' : ''}`}>
@@ -64,8 +54,8 @@ return (
                     <Link to="/remove-item" className={`collapsed ${location.pathname === '/remove-item' ? 'active' : ''}`}>
                         <FontAwesomeIcon icon={faTrash} className="fa-icon" />
                     </Link>
-</div>
-                    
+               
+                </div>     
                     <div className="navbar-nav">
                         <Link to="/search-item" className={`search-section ${location.pathname === '/search-item' ? 'active' : ''}`}>
                             <FontAwesomeIcon icon={faMagnifyingGlass} style={{ marginRight: '10px' }} className="fa-icon"/>
