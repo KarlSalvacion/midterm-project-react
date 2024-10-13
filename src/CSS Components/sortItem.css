@@ -1,0 +1,25 @@
+.sort-item-placeholder {
+    
+    padding: 20px;
+    margin-top: -10px;
+    border-radius: 10px;
+}
+
+.sort-items-text {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    font-family: "Outfit";
+}
+
+.table-header {
+    position: sticky;
+     top: 0;
+
+}
+
+.table th {
+    background-color: #353535;
+    color: #f9f9f9;
+}

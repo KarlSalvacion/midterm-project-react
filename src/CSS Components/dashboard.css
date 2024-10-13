@@ -1,0 +1,166 @@
+.dashboard-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 600px;
+    border-radius: 10px;
+  }
+  
+  .top-section {
+    background-color: #353535;
+    color: #fff;
+    padding: 10px;
+    width: 1100px;
+    height: 140px;
+    border-radius: 10px;
+    box-sizing: border-box;
+  }
+  
+  .dashboard-title {
+    font-size: 36px;
+    font-family: "Outfit";
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+
+.icons {
+    margin-right: 10px;
+}
+
+  .button-section {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button {
+    background-color: rgb(233, 190, 37); ;
+    color: #353535;
+    border: 3px solid rgb(233, 190, 37);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 10px 10px 15px 10px;
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.25s ease-in-out;
+    flex-shrink: 0;
+  }
+  
+  .button:hover {
+    background-color: #353535;
+    color: rgb(233, 190, 37);
+    border: 3px solid rgb(233, 190, 37);
+    transform: translateY(-5px);
+  }
+  
+  .middle-section {
+    height: 200px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .bottom-section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  
+  .summary-section {
+    height: 400px;
+    width: 20%;
+    background-color: #353535;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0px;
+    color: #fff;
+    text-align: left;
+    flex: 1;
+  }
+  
+  .summary-item {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .summary-label {
+    font-size: 16px;
+    margin-right: 10px;
+    width: 150px;
+    text-align: left;
+  }
+  
+  .summary-value {
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
+  }
+  .recently-added-section {
+    width: 50%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .summary-title {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .summary-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .summary-item {
+    margin-bottom: 10px;
+  }
+  
+  .summary-label {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .summary-value {
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+.recently-added-section {
+    background-color: #353535;
+    width: 800px;
+    margin-left: 0px;
+}
+  
+  .recently-added-title {
+    font-size: 26px;
+    font-family: "Outfit";
+    margin-bottom: 20px;
+    color: #f9f9f9;
+  }
+  
+  .recently-added-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .recently-added-table th, .recently-added-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .recently-added-table th {
+    background-color: rgb(233, 190, 37);
+  }
+
+  .recently-added-table tbody {
+    background-color: #f9f9f9;
+  }
+
